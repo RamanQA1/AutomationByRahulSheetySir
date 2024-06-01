@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="amazonPracticeSessions.BuyAProduct">
+      <class name="practiceSession2.SumOfTableInteger">
         <methods>
-          <include name="BuyLower"/>
+          <include name="summ1"/>
         </methods>
-      </class> <!-- amazonPracticeSessions.BuyAProduct -->
+      </class> <!-- practiceSession2.SumOfTableInteger -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

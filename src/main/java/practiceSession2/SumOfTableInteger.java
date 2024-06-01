@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -48,6 +49,15 @@ public class SumOfTableInteger {
 		}
 		
 		System.out.println(sum);
+		
+		// we assert our sum equals to total sum..
+		// capture text and split to get only total amount..
+		
+		String amt[]=driver.findElement(By.xpath("//div[@class='totalAmount']")).getText().split(":");
+		// trim white space in amont value and convert string to Integer...
+		int realAmt=Integer.parseInt(amt[1].trim());
+		
+		Assert.assertEquals(sum,realAmt);
 
 	}
 
